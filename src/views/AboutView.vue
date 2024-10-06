@@ -7,49 +7,57 @@ const team = ref([
     name: 'Lina Castañeda',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/lina-castañeda.jpeg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      'Soy ingeniero Electrónico de Unillanos, con pasión por la innovación y los desafíos.'
   },
   {
     name: 'Hadid Villanueva',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/hadid-villanueva.jpeg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      '¡Hola! Soy un ingeniero Electrónico de Unillanos, siempre preparado para enfrentar retos y desarrollar soluciones.'
   },
   {
     name: 'Juan Cruz',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/juan-cruz.jpg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      'Hola, soy ingeniero Electrónico Unillanos, apasionado por innovar y resolver desafíos.'
   },
   {
     name: 'Jhonatan Sabogal',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/jhonatan-sabogal.jpg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      'Soy un ingeniero Electrónico originario de Unillanos, listo para enfrentar desafíos y crear soluciones creativas.'
   },
   {
     name: 'Juan Gonzalez',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/juan-gonzalez.jpeg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      '¡Hola! Soy un ingeniero Electrónico de Unillanos, entusiasta de los desafíos y la innovación'
   },
   {
     name: 'Jhoan Caicedo',
     ocuppation: 'Software Engineer',
     img: '/src/assets/team/jhoan-caicedo.jpeg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      'Hola, soy ingeniero de software de Unillanos, siempre buscando nuevos desafíos y oportunidades de innovación'
   },
   {
     name: 'Daniel Martinez',
     ocuppation: 'Software Engineer',
     img: '/src/assets/team/daniel-martinez.jpeg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      'Soy un ingeniero de software de Unillanos, apasionado por resolver problemas y crear soluciones innovadoras.'
   },
   {
-    name: 'Yuberley',
+    name: 'Yuberley Guerrero',
     ocuppation: 'Software Engineer',
     img: '/src/assets/team/yuberley.jpeg',
-    description: 'Hola soy de unillanos y soy genial'
+    description:
+      '¡Hola! Soy ingeniero de software de Unillanos, siempre listo para innovar y enfrentar desafíos.'
   }
 ])
 </script>
