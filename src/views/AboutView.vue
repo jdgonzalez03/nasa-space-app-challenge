@@ -8,56 +8,42 @@ const team = ref([
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/lina-castañeda.jpeg',
     description:
-      'Soy ingeniero Electrónico de Unillanos, con pasión por la innovación y los desafíos.'
-  },
-  {
-    name: 'Hadid Villanueva',
-    ocuppation: 'Electronic Engineer',
-    img: '/src/assets/team/hadid-villanueva.jpeg',
-    description:
-      '¡Hola! Soy un ingeniero Electrónico de Unillanos, siempre preparado para enfrentar retos y desarrollar soluciones.'
+      'I am an Electronic Engineer from Unillanos, passionate about innovation and challenges.'
   },
   {
     name: 'Juan Cruz',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/juan-cruz.jpg',
     description:
-      'Hola, soy ingeniero Electrónico Unillanos, apasionado por innovar y resolver desafíos.'
+      'Hello, I am an Electronic Engineer from Unillanos, passionate about innovating and solving challenges.'
   },
   {
     name: 'Jhonatan Sabogal',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/jhonatan-sabogal.jpg',
     description:
-      'Soy un ingeniero Electrónico originario de Unillanos, listo para enfrentar desafíos y crear soluciones creativas.'
+      'I am an Electronic Engineer from Unillanos, ready to tackle challenges and create creative solutions.'
   },
   {
     name: 'Juan Gonzalez',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/juan-gonzalez.jpeg',
     description:
-      '¡Hola! Soy un ingeniero Electrónico de Unillanos, entusiasta de los desafíos y la innovación'
+      'Hi! I am an Electronic Engineer from Unillanos, enthusiastic about challenges and innovation.'
   },
   {
     name: 'Jhoan Caicedo',
     ocuppation: 'Software Engineer',
     img: '/src/assets/team/jhoan-caicedo.jpeg',
     description:
-      'Hola, soy ingeniero de software de Unillanos, siempre buscando nuevos desafíos y oportunidades de innovación'
+      'Hello, I am a Software Engineer from Unillanos, always looking for new challenges and opportunities for innovation.'
   },
   {
     name: 'Daniel Martinez',
     ocuppation: 'Software Engineer',
     img: '/src/assets/team/daniel-martinez.jpeg',
     description:
-      'Soy un ingeniero de software de Unillanos, apasionado por resolver problemas y crear soluciones innovadoras.'
-  },
-  {
-    name: 'Yuberley Guerrero',
-    ocuppation: 'Software Engineer',
-    img: '/src/assets/team/yuberley.jpeg',
-    description:
-      '¡Hola! Soy ingeniero de software de Unillanos, siempre listo para innovar y enfrentar desafíos.'
+      'I am a Software Engineer from Unillanos, passionate about solving problems and creating innovative solutions.'
   }
 ])
 </script>
@@ -106,7 +92,8 @@ header p {
 
 .team {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1024px;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
   padding: 20px 0;
