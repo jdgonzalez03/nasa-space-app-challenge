@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="map-container">
     <h1>Seleccione un punto en el mapa</h1>
     <small>De momento esto solo funciona en Colombia</small>
     <div id="mapid" ref="mapContainer"></div>
@@ -65,10 +65,35 @@ onMounted(() => {
 </script>
 
 <style scoped>
-#mapid {
-  height: 600px;
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
 }
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+small {
+  font-size: 1rem;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+#mapid {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
 #imagen-api {
-  margin-top: 20px;
+  width: 100%;
 }
 </style>
