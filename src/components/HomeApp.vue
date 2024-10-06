@@ -49,6 +49,7 @@ import LayoutComponentHome from '@/layouts/LayoutComponentHome.vue'
     <template #render>
       <main>
         <RouterView />
+        <img class="cafe" src="@/assets/cafecito.png" alt="Cafe" />
       </main>
     </template>
   </LayoutComponentHome>
@@ -155,5 +156,12 @@ i {
 main {
   background-color: var(--bg-color-render-page);
   min-height: 100vh;
+}
+
+.cafe {
+  position: absolute;
+  width: 120px;
+  bottom: 0;
+  right: 0;
 }
 </style>

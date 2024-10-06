@@ -100,10 +100,10 @@ small {
 
 #mapid {
   width: 100%;
-  height: 470px;
+  height: 508px;
   width: 500px;
   margin-bottom: 20px;
-  border: 24px solid #64e07b;
+  border: 4px solid #64e07b;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
