@@ -36,13 +36,13 @@ const team = ref([
   {
     name: 'Jhoan Caicedo',
     ocuppation: 'Software Engineer',
-    img: '/src/assets/team/jhoan-caicedo.png',
+    img: '/src/assets/team/jhoan-caicedo.jpeg',
     description: 'Hola soy de unillanos y soy genial'
   },
   {
     name: 'Daniel Martinez',
     ocuppation: 'Software Engineer',
-    img: '/src/assets/team/daniel-martinez.png',
+    img: '/src/assets/team/daniel-martinez.jpeg',
     description: 'Hola soy de unillanos y soy genial'
   },
   {
