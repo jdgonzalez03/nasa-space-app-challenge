@@ -2,24 +2,26 @@
   <div class="data-table">
     <h1>Meteorological Data</h1>
     <small>To take in mind</small>
-    <table>
-      <thead>
-        <tr>
-          <th>Precipitation Range (mm)</th>
-          <th>Cloud Fraction Range (%)</th>
-          <th>Pressure Range (hPa)</th>
-          <th>Interpretation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(data, index) in weatherData" :key="index">
-          <td>{{ data.precipitation }}</td>
-          <td>{{ data.cloudFraction }}</td>
-          <td>{{ data.pressure }}</td>
-          <td>{{ data.description }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Precipitation Range (mm)</th>
+            <th>Cloud Fraction Range (%)</th>
+            <th>Pressure Range (hPa)</th>
+            <th>Interpretation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(data, index) in weatherData" :key="index">
+            <td>{{ data.precipitation }}</td>
+            <td>{{ data.cloudFraction }}</td>
+            <td>{{ data.pressure }}</td>
+            <td>{{ data.description }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -77,27 +79,43 @@ const weatherData = ref([
   max-width: 800px;
   padding: 20px;
 }
+
 h1 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  text-align: center;
+}
+
+.table-container {
+  background-color: white; /* Fondo blanco para el contenedor de la tabla */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Para eliminar el espacio entre celdas */
 }
 
 th,
 td {
-  border: 1px solid #ccc;
-  padding: 5px; /* Reducido */
+  padding: 10px; /* Aumentado para mejor apariencia */
   text-align: center;
-  font-size: 0.75rem; /* Reducido */
+  font-size: 0.7rem; /* Aumentado para mejor legibilidad */
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #ffebcd; /* Color pastel para los encabezados */
+  border-radius: 20px; /* Bordes redondeados para encabezados */
+  color: #4b4b4b; /* Color de texto */
+}
+
+tbody tr {
+  background-color: #f9f9f9; /* Color claro para las filas */
+}
+
+td {
+  border: none; /* Eliminar bordes */
 }
 
 small {
