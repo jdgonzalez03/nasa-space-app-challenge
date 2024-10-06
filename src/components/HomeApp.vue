@@ -50,6 +50,7 @@ import LayoutComponentHome from '@/layouts/LayoutComponentHome.vue'
       <main>
         <RouterView />
         <img class="cafe" src="@/assets/cafecito.png" alt="Cafe" />
+        <img class="carrito" src="@/assets/carrito.png" alt="Carrit" />
       </main>
     </template>
   </LayoutComponentHome>
@@ -163,5 +164,12 @@ main {
   width: 120px;
   bottom: 0;
   right: 0;
+}
+
+.carrito {
+  position: absolute;
+  width: 110px;
+  bottom: 10px;
+  left: 370px;
 }
 </style>

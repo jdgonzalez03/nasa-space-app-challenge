@@ -13,7 +13,7 @@
             alt="Imagen devuelta por el API"
             class="modal-image"
           />
-          <p v-else>No image URL was received from the API.</p>
+          <p v-else>Loading...</p>
           <button @click="isModalOpen = false" class="close-button">Close</button>
         </div>
       </div>
@@ -32,10 +32,10 @@ const mapContainer = ref(null)
 const imageUrl = ref(null)
 let currentMarker = null
 
-const BASE_URL = import.meta.env.VITE_API_URL
+const BASE_URL = import.meta.env.VITE_API_URL_PC
 
 onMounted(() => {
-  const mymap = L.map(mapContainer.value).setView([4.5709, -74.2973], 6)
+  const mymap = L.map(mapContainer.value).setView([4.5709, -74.2973], 7)
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
@@ -44,6 +44,7 @@ onMounted(() => {
   function onMapClick(e) {
     const { lat, lng } = e.latlng
     isModalOpen.value = true // Cambié aquí para usar la referencia correctamente
+    imageUrl.value = null
 
     if (currentMarker) {
       mymap.removeLayer(currentMarker)
@@ -52,18 +53,15 @@ onMounted(() => {
     currentMarker = L.marker([lat, lng]).addTo(mymap)
 
     console.log('Latitud:', lat, 'Longitud:', lng)
-
-    fetch(BASE_URL, {
-      method: 'POST',
+    fetch(`${BASE_URL}?lat=${lat}&lon=${lng}`, {
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ lat: lat, lon: lng })
+      }
     })
-      .then((response) => response.json())
       .then((data) => {
         console.log('Respuesta del servidor:', data)
-        imageUrl.value = data.image_url || null
+        imageUrl.value = data.url || null
       })
       .catch((error) => {
         console.error('Error:', error)
@@ -115,23 +113,29 @@ small {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro y semi-transparente */
   display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 300px;
+  justify-content: flex-start;
 }
 
 .modal-content {
   position: relative;
-  width: 1020px; /* Ancho fijo */
+  height: 490px;
+  width: 600px; /* Ancho fijo */
   background-color: white; /* Fondo blanco para el contenido */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para el modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-image {
-  max-width: 100%;
+  max-width: 600px;
   height: auto; /* Mantener la proporción */
 }
 

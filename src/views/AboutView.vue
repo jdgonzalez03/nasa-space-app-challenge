@@ -18,7 +18,7 @@ const team = ref([
       'Hello, I am an Electronic Engineer from Unillanos, passionate about innovating and solving challenges.'
   },
   {
-    name: 'Jhonatan Sabogal',
+    name: 'Jhonattan Sabogal',
     ocuppation: 'Electronic Engineer',
     img: '/src/assets/team/jhonatan-sabogal.jpg',
     description:
@@ -32,7 +32,7 @@ const team = ref([
       'Hi! I am an Electronic Engineer from Unillanos, enthusiastic about challenges and innovation.'
   },
   {
-    name: 'Jhoan Caicedo',
+    name: 'Johan Caicedo',
     ocuppation: 'Software Engineer',
     img: '/src/assets/team/jhoan-caicedo.jpeg',
     description:
@@ -92,7 +92,8 @@ header p {
 
 .team {
   display: grid;
-  max-width: 1024px;
+  margin: 0 auto;
+  max-width: 800px;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
   gap: 20px;
   justify-items: center;
