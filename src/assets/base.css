@@ -1,0 +1,27 @@
+:root {
+  --bg-color-bar-side: #455a76;
+  --bg-color-render-page: #fffcb5;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  height: 100vh;
+}
+.colombia-gradient {
+  width: 200px;
+  height: 200px;
+  rotate: 80deg;
+  background: linear-gradient(45deg, yellow 40%, blue 55%, blue 65%, red 80%);
+  border-radius: 50%;
+}
+
+.logo-gradient {
+  max-width: 200px;
+  rotate: -80deg;
+}
