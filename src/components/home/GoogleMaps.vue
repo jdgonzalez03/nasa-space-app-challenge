@@ -1,7 +1,8 @@
 <template>
   <div class="map-container">
-    <h1>Seleccione un punto en el mapa</h1>
-    <small>De momento esto solo funciona en Colombia</small>
+    <h1>Select a point on the map</h1>
+    <small>Currently, this only works in Colombia</small>
+
     <div id="mapid" ref="mapContainer"></div>
     <Teleport to="body">
       <div id="imagen-api" v-if="isModalOpen" class="modal">
@@ -12,8 +13,8 @@
             alt="Imagen devuelta por el API"
             class="modal-image"
           />
-          <p v-else>No se recibió una URL de imagen del API.</p>
-          <button @click="isModalOpen = false" class="close-button">Cerrar</button>
+          <p v-else>No image URL was received from the API.</p>
+          <button @click="isModalOpen = false" class="close-button">Close</button>
         </div>
       </div>
     </Teleport>

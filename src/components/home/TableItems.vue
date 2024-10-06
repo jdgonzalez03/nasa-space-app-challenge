@@ -1,14 +1,14 @@
 <template>
   <div class="data-table">
-    <h1>Datos Meteorológicos</h1>
-    <small>A tener en cuenta</small>
+    <h1>Meteorological Data</h1>
+    <small>To take in mind</small>
     <table>
       <thead>
         <tr>
-          <th>Precipitación Promedio (mm)</th>
-          <th>Fracción de Nubes Promedio (%)</th>
-          <th>Presión en la Parte Superior de las Nubes (hPa)</th>
-          <th>Descripción</th>
+          <th>Precipitation Range (mm)</th>
+          <th>Cloud Fraction Range (%)</th>
+          <th>Pressure Range (hPa)</th>
+          <th>Interpretation</th>
         </tr>
       </thead>
       <tbody>
@@ -26,37 +26,42 @@
 <script setup>
 import { ref } from 'vue'
 
-// Datos de ejemplo
 const weatherData = ref([
   {
-    precipitation: 12,
-    cloudFraction: 75,
-    pressure: 1015,
-    description: 'Lluvia leve en promedio.'
+    precipitation: '0-2',
+    cloudFraction: '0-20',
+    pressure: '1000-1015',
+    description: 'Mostly dry weather; little to no rain. Low chance of clouds.'
   },
   {
-    precipitation: 5,
-    cloudFraction: 50,
-    pressure: 1020,
-    description: 'Pocas nubes, condiciones mayormente despejadas.'
+    precipitation: '2 - 10',
+    cloudFraction: '20 - 40',
+    pressure: '1015 - 1025',
+    description: 'Slightly humid weather; possibility of drizzle. Scattered clouds.'
   },
   {
-    precipitation: 0,
-    cloudFraction: 10,
-    pressure: 1010,
-    description: 'Sin precipitación, cielo despejado.'
+    precipitation: '10 - 25',
+    cloudFraction: '40 - 60',
+    pressure: '1025 - 1035',
+    description: 'Moderately humid weather; light rain is likely. Denser clouds.'
   },
   {
-    precipitation: 25,
-    cloudFraction: 90,
-    pressure: 1005,
-    description: 'Lluvia moderada a fuerte.'
+    precipitation: '25 - 50',
+    cloudFraction: '60 - 80',
+    pressure: '1035 - 1045',
+    description: 'Humid weather; frequent and abundant rains. Layered or cumulus clouds.'
   },
   {
-    precipitation: 15,
-    cloudFraction: 60,
-    pressure: 1018,
-    description: 'Condiciones nubladas con lluvia ocasional.'
+    precipitation: '50 - 100',
+    cloudFraction: '80 - 100',
+    pressure: '1045 - 1055',
+    description: 'Very humid weather; intense rains and potential for storms. High cloud coverage.'
+  },
+  {
+    precipitation: '> 100',
+    cloudFraction: 100,
+    pressure: '< 1045',
+    description: 'Extremely humid weather; risk of flooding. Very dense and stormy clouds.'
   }
 ])
 </script>
@@ -88,7 +93,7 @@ td {
   border: 1px solid #ccc;
   padding: 5px; /* Reducido */
   text-align: center;
-  font-size: 0.875rem; /* Reducido */
+  font-size: 0.75rem; /* Reducido */
 }
 
 th {
